@@ -1,0 +1,48 @@
+.base{
+    -fx-background-image: url("file:/D:/General/Learning/Technik/5_Semestr/TRPZ/Office_Communicator/Client/src/main/resources/org/example/client/Cyber/Photos/AuthorizationFormBackground.png");
+    -fx-background-size: 600 400;
+}
+
+.label-welcome {
+    -fx-font-size: 20px;
+    -fx-text-fill: #079eb9;
+    -fx-pref-width: 400;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20 0;
+}
+
+.text-field {
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-pref-width: 200;
+    -fx-background-color: #0ac7e7;
+    -fx-text-fill: #2b2b2b;
+    -fx-border-color: #087da2;
+}
+
+.password-field {
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-pref-width: 200;
+    -fx-background-color: #0ac7e7;
+    -fx-text-fill: #2b2b2b;
+    -fx-border-color: #087da2;
+}
+
+.button {
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-background-color: #0ac7e7;
+    -fx-text-fill: #1c1c1c;
+    -fx-effect: dropshadow(gaussian, #0ac7e7, 10, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #1cc2e2;
+}
+
+.button:pressed {
+    -fx-background-color: #087da2;
+}

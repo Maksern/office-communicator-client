@@ -2,7 +2,9 @@ package org.example.client;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import org.example.client.Frames.Authorization.Authorization;
+import org.example.client.Frames.ChooseStyle.ChooseStyle;
+import org.example.client.Frames.InterfaceAbstractFactory.Factory.AbstractFactory;
+import org.example.client.Frames.InterfaceAbstractFactory.FactoryProducer;
 
 import java.io.IOException;
 
@@ -14,10 +16,6 @@ public class  ClientApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        try {
-            new Authorization().start(primaryStage);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        new ChooseStyle().start(primaryStage);
     }
 }

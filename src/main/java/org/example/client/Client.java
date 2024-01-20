@@ -3,7 +3,9 @@ package org.example.client;
 import javafx.application.Platform;
 import javafx.scene.layout.VBox;
 import lombok.Data;
-import org.example.client.Frames.Message.MessageVBox;
+import org.example.client.Frames.InterfaceAbstractFactory.ClientMenu.ClientMenuController;
+import org.example.client.Frames.InterfaceAbstractFactory.Message.MessageVBox;
+import org.example.client.Models.User;
 
 import java.io.*;
 import java.net.Socket;
@@ -13,9 +15,8 @@ public class Client {
     private Socket socket;
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
-    private boolean keepListening;
-    private Long clientID;
-    private String clientUsername;
+    private Thread listenThread;
+
 
     public Client(Socket socket) {
         try {
@@ -40,30 +41,15 @@ public class Client {
         }
     }
 
-    public void listenForMessage(VBox chatHistory){
-        keepListening = true;
-        new Thread(() -> {
-            try {
-                while(keepListening & socket.isConnected()){
-                    String messageFromServer = bufferedReader.readLine();
-                    if(messageFromServer.equalsIgnoreCase("closeChat")){
-                        break;
-                    }
-                    Platform.runLater(() -> {
-                        VBox messageVBox = new MessageVBox(messageFromServer, messageFromServer, clientUsername);
-                        chatHistory.getChildren().add(messageVBox);
-                    });
-                }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
-        }).start();
+    public void listenForMessage(ClientMenuController controller){
+        listenThread = new ListenThread();
+        listenThread.start();
     }
 
     public void stopListenForMessage(){
-        keepListening = false;
+        listenThread.interrupt();
     }
+
 
     public void closeEverything(){
         try {

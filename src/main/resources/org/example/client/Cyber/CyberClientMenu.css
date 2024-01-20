@@ -1,0 +1,73 @@
+.base{
+    -fx-background-image: url("file:/D:/General/Learning/Technik/5_Semestr/TRPZ/Office_Communicator/Client/src/main/resources/org/example/client/Cyber/Photos/ClientMenuBackground.png");
+    -fx-background-size: 600 400;
+}
+
+.scrollPane{
+    -fx-background-color: transparent;
+}
+
+.scrollPane .viewport{
+    -fx-background-color: transparent;
+}
+
+.scrollPane .scroll-bar:vertical {
+    -fx-background-color: #0ac7e7;
+}
+
+.scrollPane .scroll-bar:vertical .thumb{
+    -fx-background-color: black;
+}
+
+
+.menuElement{
+    -fx-background-color: #0ac7e7;
+    -fx-padding: 5 10 5 10;
+}
+
+.menuElement:hover {
+    -fx-background-color: #24acc7;
+}
+
+
+.menuElement .avatar{
+    -fx-background-color: #ccc;
+    -fx-background-size: cover;
+    -fx-background-radius: 50%;
+    -fx-min-width: 25;
+    -fx-min-height: 25;
+}
+
+.menuElement .name{
+    -fx-font-size: 14;
+    -fx-text-fill: #1c1c1c;
+    -fx-font-family: "Comic Sans MS";
+}
+
+.menuElement .newMessagesCount {
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1c1c1c;
+    -fx-padding: 3 8;
+    -fx-border-radius: 5;
+}
+
+
+.button {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 16px;
+    -fx-background-color: #0ac7e7;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 5, 4;
+    -fx-text-fill: #1c1c1c;
+    -fx-effect: dropshadow(gaussian, #0ac7e7, 10, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #24acc7;
+}
+
+.button:pressed {
+    -fx-background-color: #087da2;
+}

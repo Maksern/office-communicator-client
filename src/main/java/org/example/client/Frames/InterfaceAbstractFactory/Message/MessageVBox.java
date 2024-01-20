@@ -1,5 +1,6 @@
-package org.example.client.Frames.Message;
+package org.example.client.Frames.InterfaceAbstractFactory.Message;
 
+import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
@@ -16,18 +17,23 @@ public class MessageVBox extends VBox {
 
     private void initMessage(String clientUsername) {
         Label messageLabel = new Label(text);
+        messageLabel.setMinHeight(USE_PREF_SIZE);
         Label senderLabel = new Label(senderUsername);
-        messageLabel.setWrapText(true);
-        messageLabel.setMaxWidth(200);
-        getStyleClass().add("message");
+
+        messageLabel.getStyleClass().add("messageText");
+        senderLabel.getStyleClass().add("messageSender");
 
         if (clientUsername.equals(senderUsername)) {
             getStyleClass().add("ownMessage");
+            setMargin(this, new Insets(0, 0, 10, 160));
         } else {
             getStyleClass().add("otherMessage");
+            setMargin(this, new Insets(0, 0, 10, 0));
         }
 
+        setMaxWidth(180);
         getChildren().add(messageLabel);
         getChildren().add(senderLabel);
+        getStyleClass().add("message");
     }
 }

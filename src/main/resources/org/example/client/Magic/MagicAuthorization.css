@@ -1,0 +1,60 @@
+.base{
+    -fx-background-image: url("file:/D:/General/Learning/Technik/5_Semestr/TRPZ/Office_Communicator/Client/src/main/resources/org/example/client/Magic/Photos/AuthorizationFormBackground.png");
+    -fx-background-size: 600 400;
+}
+
+.label-welcome {
+    -fx-font-size: 20px;
+    -fx-text-fill: rgba(0, 231, 2, 0.7);
+    -fx-pref-width: 400;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20 0;
+}
+
+.text-field {
+    -fx-padding: 5;
+    -fx-pref-width: 200;
+    -fx-background-color: #85c1a1;
+    -fx-font-family: "Comic Sans MS";
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #27ae60;
+}
+
+.password-field {
+    -fx-padding: 5;
+    -fx-pref-width: 200;
+    -fx-background-color: #85c1a1;
+    -fx-font-family: "Comic Sans MS";
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #27ae60;
+}
+
+.button {
+    -fx-background-color:
+            linear-gradient(to bottom, #2ecc71, #27ae60),
+            radial-gradient(center 50% -40%, radius 200%, #85c1a1, #27ae60);
+
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 5, 4;
+    -fx-padding: 10 20;
+    -fx-text-fill: white;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 16px;
+
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color:
+            linear-gradient(to bottom, #28b463, #239b56),
+            radial-gradient(center 50% -40%, radius 200%, #5ca380, #239b56);
+}
+
+.button:pressed {
+    -fx-background-color:
+            linear-gradient(to bottom, #27ae60, #218f54),
+            radial-gradient(center 50% -40%, radius 200%, #4d8c77, #218f54);
+}

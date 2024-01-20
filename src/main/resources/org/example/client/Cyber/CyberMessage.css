@@ -1,0 +1,26 @@
+.ownMessage {
+    -fx-background-color: gray;
+    -fx-text-fill: white;
+    -fx-padding: 5px;
+}
+
+.otherMessage {
+    -fx-background-color: #24acc7;
+    -fx-padding: 5px;
+    -fx-end-margin: 10px;
+}
+
+.messageText{
+    -fx-font-family: "Comic Sans MS";
+    -fx-wrap-text: true;
+    -fx-font-size: 15;
+}
+
+.messageSender{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 12;
+}
+
+.message{
+
+}
